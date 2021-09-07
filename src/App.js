@@ -42,23 +42,25 @@ class App extends React.Component {
                     return (
                         <div key={item.id}>
                             {item.length !== 0 ? (
-                                <table
-                                    className="table table-striped table-hover"
-                                    key={item.id}
-                                >
-                                    <thead>
-                                        <BOMHeader id={item.id} />
-                                    </thead>
-                                    <tbody>
-                                        <BOMItems
-                                            bomId={item.id}
-                                            url={this.state.url}
-                                            url_template={
-                                                this.state.url_template
-                                            }
-                                        />
-                                    </tbody>
-                                </table>
+                                <>
+                                    <table
+                                        className="table table-striped table-hover"
+                                        key={item.id}
+                                    >
+                                        <thead>
+                                            <BOMHeader id={item.id} />
+                                        </thead>
+                                        <tbody>
+                                            <BOMItems
+                                                bomId={item.id}
+                                                url={this.state.url}
+                                                url_template={
+                                                    this.state.url_template
+                                                }
+                                            />
+                                        </tbody>
+                                    </table>
+                                </>
                             ) : (
                                 <div key={index}></div>
                             )}

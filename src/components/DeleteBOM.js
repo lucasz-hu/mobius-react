@@ -16,6 +16,8 @@ class DeleteBom extends React.Component {
 
     onClick() {
         /*When button is clicked, sends a request to delete from api*/
+
+        /*To prevent actually calling api and delete bomItem, comment out this block */
         axios
             .delete(
                 `${this.state.url}${this.state.bomId}${this.state.url_template}${this.state.id}`
@@ -23,6 +25,9 @@ class DeleteBom extends React.Component {
             .catch((error) => {
                 console.error(error);
             });
+
+        this.props.parentMethod();
+        console.log(this.state.showItem);
         // axios.put(
         //     `${this.state.url}${this.state.bomId}${this.state.url_template}${this.state.id}`,
         //     { quantity: 5 }
