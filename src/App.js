@@ -9,7 +9,7 @@ class App extends React.Component {
         this.state = {
             bomList: [],
             bomItems: [],
-            url: "https://6136db6b8700c50017ef56c1.mockapi.io/api/v1/bom/", //be sure to include a trailing /
+            url: "https://6137036b8700c50017ef573d.mockapi.io/api/v1/bom/", //be sure to include a trailing /
             url_template: "/bomitem/",
         };
     }
